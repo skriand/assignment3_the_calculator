@@ -1,7 +1,7 @@
 package mmcs.assignment3_calculator.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import mmcs.assignment3_calculator.R
 import mmcs.assignment3_calculator.databinding.ActivityMainBinding

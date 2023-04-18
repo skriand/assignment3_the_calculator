@@ -22,20 +22,45 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.3" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="@{viewModel.display}"
-            android:textAlignment="viewEnd"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="48sp"
+            android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.35"
+                android:autoSizeTextType="uniform"
+                android:gravity="right|center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="10dp"
+                android:text="@{viewModel.displayWithOperation}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.65"
+                android:autoSizeTextType="uniform"
+                android:gravity="right|center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@{viewModel.display}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
@@ -62,7 +87,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(1)}"
-                        android:text="1" />
+                        android:text="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <Button
                         android:id="@+id/button2"
@@ -73,7 +99,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(2)}"
-                        android:text="2" />
+                        android:text="2"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <Button
                         android:id="@+id/button3"
@@ -84,7 +111,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(3)}"
-                        android:text="3" />
+                        android:text="3"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </TableRow>
 
                 <TableRow
@@ -101,7 +129,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(4)}"
-                        android:text="4" />
+                        android:text="4"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <Button
                         android:id="@+id/button5"
@@ -112,7 +141,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(5)}"
-                        android:text="5" />
+                        android:text="5"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <Button
                         android:id="@+id/button6"
@@ -123,7 +153,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(6)}"
-                        android:text="6" />
+                        android:text="6"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 </TableRow>
 
@@ -141,7 +172,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(7)}"
-                        android:text="7" />
+                        android:text="7"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <Button
                         android:id="@+id/button8"
@@ -152,7 +184,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(8)}"
-                        android:text="8" />
+                        android:text="8"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <Button
                         android:id="@+id/button9"
@@ -163,7 +196,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(9)}"
-                        android:text="9" />
+                        android:text="9"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 </TableRow>
 
@@ -181,7 +215,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addPoint()}"
-                        android:text="." />
+                        android:text="."
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <Button
                         android:id="@+id/button11"
@@ -192,7 +227,8 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.addDigit(0)}"
-                        android:text="0" />
+                        android:text="0"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <Button
                         android:id="@+id/button12"
@@ -203,7 +239,9 @@
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:onClick="@{() -> viewModel.clear()}"
-                        android:text="⌫" />
+                        android:onLongClick="@{() -> viewModel.reset()}"
+                        android:text="⌫"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </TableRow>
             </TableLayout>
 
@@ -218,41 +256,45 @@
                     android:id="@+id/button13"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:layout_marginHorizontal="5dp"
                     android:layout_marginBottom="5dp"
-                    android:onClick = "@{() -> viewModel.addOperation(Operation.DIV)}"
-                    android:text="÷" />
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.addOperation(Operation.DIV)}"
+                    android:text="÷"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <Button
                     android:id="@+id/button14"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:layout_marginHorizontal="5dp"
                     android:layout_marginBottom="5dp"
-                    android:onClick = "@{() -> viewModel.addOperation(Operation.MUL)}"
-                    android:text="×" />
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.addOperation(Operation.MUL)}"
+                    android:text="×"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <Button
                     android:id="@+id/button15"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:layout_marginHorizontal="5dp"
                     android:layout_marginBottom="5dp"
-                    android:onClick = "@{() -> viewModel.addOperation(Operation.SUB)}"
-                    android:text="-" />
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.addOperation(Operation.SUB)}"
+                    android:text="-"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <Button
                     android:id="@+id/button16"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:layout_marginHorizontal="5dp"
                     android:layout_marginBottom="5dp"
-                    android:onClick = "@{() -> viewModel.addOperation(Operation.ADD)}"
-                    android:text="+" />
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.addOperation(Operation.ADD)}"
+                    android:text="+"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <Button
                     android:id="@+id/button17"
@@ -262,7 +304,8 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:onClick="@{() -> viewModel.compute()}"
-                    android:text="=" />
+                    android:text="="
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             </LinearLayout>
 
